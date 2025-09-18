@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics Dashboard - Settings</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Analytics</h2>
+      </div>
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="users.html">Users</a></li>
+          <li><a href="sales.html">Sales</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="settings.html" class="active">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <button class="sidebar-toggle" aria-label="Toggle sidebar">☰</button>
+          <div class="logo">Dashboard</div>
+          <div class="search-bar">
+            <input type="text" placeholder="Search..." aria-label="Search">
+          </div>
+        </div>
+        <div class="header-right">
+          <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Profile Avatar" class="profile-avatar">
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main class="main">
+        <h1>Settings</h1>
+
+        <!-- Profile Settings -->
+        <section class="card">
+          <h3>Profile Settings</h3>
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" value="John Doe" aria-label="Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" value="john@example.com" aria-label="Email">
+            </div>
+            <div class="form-group">
+              <label for="role">Role</label>
+              <select id="role" aria-label="Role">
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+                <option value="moderator">Moderator</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </form>
+        </section>
+
+        <!-- Preferences -->
+        <section class="card">
+          <h3>Preferences</h3>
+          <form>
+            <div class="form-group">
+              <label for="theme">Theme</label>
+              <select id="theme" aria-label="Theme">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="auto">Auto</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="language">Language</label>
+              <select id="language" aria-label="Language">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="notifications">Email Notifications</label>
+              <input type="checkbox" id="notifications" checked aria-label="Email Notifications">
+            </div>
+            <button type="submit" class="btn btn-primary">Save Preferences</button>
+          </form>
+        </section>
+
+        <!-- Security -->
+        <section class="card">
+          <h3>Security</h3>
+          <form>
+            <div class="form-group">
+              <label for="currentPassword">Current Password</label>
+              <input type="password" id="currentPassword" aria-label="Current Password">
+            </div>
+            <div class="form-group">
+              <label for="newPassword">New Password</label>
+              <input type="password" id="newPassword" aria-label="New Password">
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" id="confirmPassword" aria-label="Confirm Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Change Password</button>
+          </form>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>&copy; 2023 Analytics Dashboard. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

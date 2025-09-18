@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics Dashboard - Users</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Analytics</h2>
+      </div>
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="users.html" class="active">Users</a></li>
+          <li><a href="sales.html">Sales</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <button class="sidebar-toggle" aria-label="Toggle sidebar">☰</button>
+          <div class="logo">Dashboard</div>
+          <div class="search-bar">
+            <input type="text" placeholder="Search..." aria-label="Search">
+          </div>
+        </div>
+        <div class="header-right">
+          <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Profile Avatar" class="profile-avatar">
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main class="main">
+        <h1>Users Management</h1>
+
+        <!-- User KPIs -->
+        <section class="kpi-grid">
+          <div class="card kpi-card">
+            <div class="kpi-value" data-target="15420">0</div>
+            <div class="kpi-label">Total Users</div>
+          </div>
+          <div class="card kpi-card">
+            <div class="kpi-value" data-target="340">0</div>
+            <div class="kpi-label">Active Users</div>
+          </div>
+          <div class="card kpi-card">
+            <div class="kpi-value" data-target="85">0</div>
+            <div class="kpi-label">Retention Rate (%)</div>
+          </div>
+          <div class="card kpi-card">
+            <div class="kpi-value" data-target="120">0</div>
+            <div class="kpi-label">New Signups</div>
+          </div>
+        </section>
+
+        <!-- Users Table -->
+        <section class="card">
+          <h3>User List</h3>
+          <div class="form-group">
+            <input type="text" id="userSearch" placeholder="Search users..." aria-label="Search users">
+          </div>
+          <table class="table" id="usersTable">
+            <thead>
+              <tr>
+                <th data-sort="id">ID</th>
+                <th data-sort="name">Name</th>
+                <th data-sort="email">Email</th>
+                <th data-sort="role">Role</th>
+                <th data-sort="status">Status</th>
+                <th data-sort="lastLogin">Last Login</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Users will be populated by JavaScript -->
+            </tbody>
+          </table>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>&copy; 2023 Analytics Dashboard. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/users.js"></script>
+</body>
+</html>

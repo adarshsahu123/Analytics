@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics Dashboard - Reports</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Analytics</h2>
+      </div>
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="users.html">Users</a></li>
+          <li><a href="sales.html">Sales</a></li>
+          <li><a href="reports.html" class="active">Reports</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <button class="sidebar-toggle" aria-label="Toggle sidebar">☰</button>
+          <div class="logo">Dashboard</div>
+          <div class="search-bar">
+            <input type="text" placeholder="Search..." aria-label="Search">
+          </div>
+        </div>
+        <div class="header-right">
+          <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Profile Avatar" class="profile-avatar">
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main class="main">
+        <h1>Reports & Analytics</h1>
+
+        <!-- Export Options -->
+        <section class="card">
+          <h3>Export Reports</h3>
+          <div class="export-options">
+            <button class="btn btn-primary">Export PDF</button>
+            <button class="btn btn-secondary">Export CSV</button>
+            <button class="btn">Export Excel</button>
+          </div>
+        </section>
+
+        <!-- Charts -->
+        <section class="charts-grid">
+          <div class="card">
+            <h3>User Segments</h3>
+            <div class="chart-container">
+              <canvas id="pieChart"></canvas>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Performance Metrics</h3>
+            <div class="chart-container">
+              <canvas id="radarChart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <!-- Summary Cards -->
+        <section class="kpi-grid">
+          <div class="card kpi-card">
+            <div class="kpi-value" data-target="92">0</div>
+            <div class="kpi-label">Customer Satisfaction</div>
+          </div>
+          <div class="card kpi-card">
+            <div class="kpi-value" data-target="78">0</div>
+            <div class="kpi-label">Engagement Rate</div>
+          </div>
+          <div class="card kpi-card">
+            <div class="kpi-value" data-target="65">0</div>
+            <div class="kpi-label">Churn Rate</div>
+          </div>
+          <div class="card kpi-card">
+            <div class="kpi-value" data-target="150">0</div>
+            <div class="kpi-label">Support Tickets</div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>&copy; 2023 Analytics Dashboard. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/charts.js"></script>
+</body>
+</html>
